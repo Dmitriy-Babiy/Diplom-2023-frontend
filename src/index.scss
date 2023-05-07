@@ -1,0 +1,13 @@
+@use './scss/reset' as *;
+@use './scss/colors' as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'primeicons/primeicons.css';
+@import './components/footer/Footer.scss';
+@import './components/video/Video.scss';
+@import './components/rooms/Rooms.scss';
+
+@import './components/ui/mark/Mark.scss';
