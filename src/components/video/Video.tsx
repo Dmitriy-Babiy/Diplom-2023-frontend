@@ -1,15 +1,15 @@
 type IVideoProps = {
   title: string;
-  video: string;
+  video?: string;
 };
 
 export default function Video({ title, video }: IVideoProps) {
   return (
-    <section className='videoWrapper'>
-      <span className='videoWrapper__title'>{title}</span>
-      <div className='videoWrapper__video'>
+    <section className='relative mt-24'>
+      <span className='z-10 absolute text-8xl tracking-[30px] h-full w-full flex items-center justify-center bg-black-80 select-none'>{title}</span>
+      <div className='w-full h-[500px] overflow-hidden'>
         <video
-          className='videoWrapper__content'
+          className='relative w-full top-1/2 -translate-y-1/2'
           autoPlay
           muted
           loop

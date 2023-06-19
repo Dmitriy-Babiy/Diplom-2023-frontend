@@ -1,10 +1,15 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
+import { sessionReducer } from '../redux/slice/SessionSlice';
+import { roomsReducer } from './slice/RoomsSlice';
+import { bookingsReducer } from './slice/BookingsSlice';
 
-export const store = configureStore({
-  reducer: {},
-})
+export const Store = configureStore({
+    reducer: {
+        session: sessionReducer,
+        rooms: roomsReducer,
+        bookings: bookingsReducer,
+    },
+});
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof Store.getState>;
+export type AppDispatch = typeof Store.dispatch;

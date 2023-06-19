@@ -1,13 +1,42 @@
-@use './scss/reset' as *;
-@use './scss/colors' as *;
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import 'primeicons/primeicons.css';
-@import './components/footer/Footer.scss';
-@import './components/video/Video.scss';
-@import './components/rooms/Rooms.scss';
+body {
+    @apply scrollbar scrollbar-track-transparent scrollbar-thumb-project-green-100 scrollbar-thumb-rounded-full scrollbar-w-1;
+    @apply bg-background-color-app text-white;
+}
 
-@import './components/ui/mark/Mark.scss';
+input,
+textarea {
+    @apply border-none outline-none;
+}
+
+:focus-visible {
+    outline: none;
+}
+
+@layer components {
+    .btn {
+        @apply flex cursor-pointer select-none items-center justify-center font-light;
+    }
+
+    .btn-default {
+    }
+
+    .btn-active {
+        @apply border-project-green-200 bg-project-green-200 shadow-md transition-all hover:bg-project-green-300 focus:ring-4 focus:ring-project-green-100 active:bg-project-green-400 active:ring-4 active:ring-project-green-100;
+    }
+
+    .btn-close {
+        @apply border-project-red-100 bg-project-red-200 shadow-md transition-all hover:bg-project-red-300 focus:ring-4 focus:ring-project-red-100 active:bg-project-red-400 active:ring-4 active:ring-project-red-100;
+    }
+
+    .btn-disabled {
+        @apply border-disabled bg-disabled hover:bg-disabled focus:ring-0 active:bg-disabled active:ring-0 cursor-not-allowed;
+    }
+
+    .btn-black {
+        @apply bg-black text-white shadow-md transition-all active:scale-95 active:bg-black;
+    }
+}

@@ -1,11 +1,10 @@
-import ReactDOM from 'react-dom/client';
-import AppProvider from './AppProvider';
-import { store } from './redux/store';
 import { Provider } from 'react-redux';
-import './index.scss';
+import { Store } from './redux/Store';
+import ReactDOM from 'react-dom/client';
+import AppRouter from './router';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <Provider store={store}>
-    <AppProvider />
-  </Provider>
+    <Provider store={Store}>
+        <AppRouter />
+    </Provider>
 );

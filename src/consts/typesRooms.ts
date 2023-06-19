@@ -1,6 +1,6 @@
 const TYPESROOMS = {
     luxury: 'luxury',
-    standart : 'standard',
+    standard : 'standard',
     economy : 'economy',
 };
 
